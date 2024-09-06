@@ -138,7 +138,7 @@ function IndoensiaParticipants() {
       phone
     );
 
-    const secret = process.env.MIDTRANS_SERVER_KEY;
+    const secret = process.env.NEXT_PUBLIC_SECRET;
     const encodedSecret = Buffer.from(secret).toString("base64");
     const basicAuth = `Basic ${encodedSecret}`;
 
