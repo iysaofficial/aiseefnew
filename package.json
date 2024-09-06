@@ -2,12 +2,12 @@
   "name": "aiseef-regist",
   "version": "0.1.0",
   "private": true,
-  "scripts": {
-    "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
-    "lint": "next lint"
-  },
+"scripts": {
+  "dev": "next dev",
+  "build": "npm install --legacy-peer-deps && next build",
+  "start": "next start",
+  "lint": "next lint"
+},
   "dependencies": {
     "bootstrap": "^5.3.3",
     "next": "14.2.6",
@@ -16,7 +16,6 @@
     "react-dom": "^18",
     "react-modal-video": "^2.0.2",
     "react-slick": "^0.30.2",
-    "simple-react-lightbox": "^3.6.9-0",
     "slick-carousel": "^1.8.1"
   },
   "devDependencies": {
