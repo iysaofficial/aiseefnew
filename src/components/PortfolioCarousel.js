@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Slider from 'react-slick';
-import SimpleReactLightbox from 'simple-react-lightbox';
-import { SRLWrapper, useLightbox } from 'simple-react-lightbox';
+import Lightbox from 'react-image-lightbox';
+import 'react-image-lightbox/style.css';
 import Image from 'next/image';
 
 const contentBlog = [
@@ -22,9 +22,10 @@ const contentBlog = [
   { images: "/assets/images/main/23-14.jpg", desc: 2023, alt: "foto15" },
 ];
 
-
-
 const PortfolioCarousel = () => {
+  const [isOpen, setIsOpen] = useState(false);
+  const [photoIndex, setPhotoIndex] = useState(0);
+
   const settings = {
     arrows: false,
     slidesToShow: 4,
@@ -60,36 +61,54 @@ const PortfolioCarousel = () => {
     ],
   };
 
+  const handleOpenLightbox = (index) => {
+    setPhotoIndex(index);
+    setIsOpen(true);
+  };
+
   return (
-    <SimpleReactLightbox>
-      <SRLWrapper>
-        <Slider
-          className="img-carousel-content text-center text-white"
-          {...settings}
-        >
-          {contentBlog.map((item, index) => (
-            <div className="item p-3" key={index}>
-              <div className="dlab-box portfolio-box">
-                <div className="dlab-media dlab-img-effect dlab-img-overlay1">
-                  <Image
-                    src={item.images}
-                    alt={`Image ${item.alt}`}
-                    layout="responsive"
-                    width={600}
-                    height={400}
-                  />
-                  <div className="overlay-bx">
-                    <div className="overlay-icon text-white">
-                      <h5>{item.desc}</h5>
-                    </div>
+    <div>
+      <Slider
+        className="img-carousel-content text-center text-white"
+        {...settings}
+      >
+        {contentBlog.map((item, index) => (
+          <div className="item p-3" key={index} onClick={() => handleOpenLightbox(index)}>
+            <div className="dlab-box portfolio-box">
+              <div className="dlab-media dlab-img-effect dlab-img-overlay1">
+                <Image
+                  src={item.images}
+                  alt={`Image ${item.alt}`}
+                  layout="responsive"
+                  width={600}
+                  height={400}
+                />
+                <div className="overlay-bx">
+                  <div className="overlay-icon text-white">
+                    <h5>{item.desc}</h5>
                   </div>
                 </div>
               </div>
             </div>
-          ))}
-        </Slider>
-      </SRLWrapper>
-    </SimpleReactLightbox>
+          </div>
+        ))}
+      </Slider>
+
+      {isOpen && (
+        <Lightbox
+          mainSrc={contentBlog[photoIndex].images}
+          nextSrc={contentBlog[(photoIndex + 1) % contentBlog.length].images}
+          prevSrc={contentBlog[(photoIndex + contentBlog.length - 1) % contentBlog.length].images}
+          onCloseRequest={() => setIsOpen(false)}
+          onMovePrevRequest={() =>
+            setPhotoIndex((photoIndex + contentBlog.length - 1) % contentBlog.length)
+          }
+          onMoveNextRequest={() =>
+            setPhotoIndex((photoIndex + 1) % contentBlog.length)
+          }
+        />
+      )}
+    </div>
   );
 };
 
