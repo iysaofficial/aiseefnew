@@ -17,10 +17,11 @@
     "react-modal-video": "^2.0.2",
     "react-slick": "^0.30.2",
     "react-spring-lightbox": "^1.8.0",
-    "slick-carousel": "^1.8.1"
+    "slick-carousel": "^1.8.1",
+    "styled-components": "^6.1.13"
   },
   "devDependencies": {
-    "eslint": "^8",
+    "eslint": "^8.57.0",
     "eslint-config-next": "14.2.6"
   }
 }
