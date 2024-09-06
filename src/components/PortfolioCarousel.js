@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import Slider from 'react-slick';
-import Lightbox from 'react-image-lightbox';
-import 'react-image-lightbox/style.css';
 import Image from 'next/image';
+import Lightbox from 'react-spring-lightbox';
 
 const contentBlog = [
   { images: "/assets/images/main/aisef1.jpg", desc: 2020, alt: "foto1" },
@@ -24,13 +23,12 @@ const contentBlog = [
 
 const PortfolioCarousel = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [photoIndex, setPhotoIndex] = useState(0);
+  const [currentIndex, setCurrentIndex] = useState(0);
 
   const settings = {
     arrows: false,
     slidesToShow: 4,
     speed: 300,
-    navSpeed: 300,
     infinite: true,
     autoplay: true,
     responsive: [
@@ -62,8 +60,24 @@ const PortfolioCarousel = () => {
   };
 
   const handleOpenLightbox = (index) => {
-    setPhotoIndex(index);
+    setCurrentIndex(index);
     setIsOpen(true);
+  };
+
+  const handleCloseLightbox = () => {
+    setIsOpen(false);
+  };
+
+  const handlePrev = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === 0 ? contentBlog.length - 1 : prevIndex - 1
+    );
+  };
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) =>
+      prevIndex === contentBlog.length - 1 ? 0 : prevIndex + 1
+    );
   };
 
   return (
@@ -73,7 +87,11 @@ const PortfolioCarousel = () => {
         {...settings}
       >
         {contentBlog.map((item, index) => (
-          <div className="item p-3" key={index} onClick={() => handleOpenLightbox(index)}>
+          <div
+            className="item p-3"
+            key={index}
+            onClick={() => handleOpenLightbox(index)}
+          >
             <div className="dlab-box portfolio-box">
               <div className="dlab-media dlab-img-effect dlab-img-overlay1">
                 <Image
@@ -96,16 +114,15 @@ const PortfolioCarousel = () => {
 
       {isOpen && (
         <Lightbox
-          mainSrc={contentBlog[photoIndex].images}
-          nextSrc={contentBlog[(photoIndex + 1) % contentBlog.length].images}
-          prevSrc={contentBlog[(photoIndex + contentBlog.length - 1) % contentBlog.length].images}
-          onCloseRequest={() => setIsOpen(false)}
-          onMovePrevRequest={() =>
-            setPhotoIndex((photoIndex + contentBlog.length - 1) % contentBlog.length)
-          }
-          onMoveNextRequest={() =>
-            setPhotoIndex((photoIndex + 1) % contentBlog.length)
-          }
+          isOpen={isOpen}
+          onPrev={handlePrev}
+          onNext={handleNext}
+          images={contentBlog.map((item) => ({
+            src: item.images,
+            alt: item.alt,
+          }))}
+          currentIndex={currentIndex}
+          onClose={handleCloseLightbox}
         />
       )}
     </div>
