@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
-import Slider from 'react-slick';
-import Image from 'next/image';
-import Lightbox from 'react-spring-lightbox';
+import React, { useState } from "react";
+import Slider from "react-slick";
+import Image from "next/image";
+import Lightbox from "react-spring-lightbox";
 
 const contentBlog = [
   { images: "/assets/images/main/aisef1.jpg", desc: 2020, alt: "foto1" },
@@ -93,7 +93,7 @@ const PortfolioCarousel = () => {
             onClick={() => handleOpenLightbox(index)}
           >
             <div className="dlab-box portfolio-box">
-              <div className="dlab-media dlab-img-effect dlab-img-overlay1">
+              <div className="dlab-media dlab-img-effect dlab-img-overlay1 ">
                 <Image
                   src={item.images}
                   alt={`Image ${item.alt}`}
@@ -104,6 +104,7 @@ const PortfolioCarousel = () => {
                 <div className="overlay-bx">
                   <div className="overlay-icon text-white">
                     <h5>{item.desc}</h5>
+                    <i className="fas fa-expand icon-bx-xs mx-auto"></i>
                   </div>
                 </div>
               </div>
@@ -114,6 +115,7 @@ const PortfolioCarousel = () => {
 
       {isOpen && (
         <Lightbox
+          className="customLightboxContent customLightboxOverlay"
           isOpen={isOpen}
           onPrev={handlePrev}
           onNext={handleNext}
