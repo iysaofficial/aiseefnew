@@ -8,197 +8,22 @@ import { useState, useEffect } from "react";
 const inter = Inter({ subsets: ["latin"] });
 
 function IndoensiaParticipants() {
-  const [selectedCategory, setSelectedCategory] = useState("");
-  const [price, setPrice] = useState("");
-  const [paymentUrl, setPaymentUrl] = useState("");
-  const [uniqueId, setUniqueId] = useState(""); // Mengatur Id ke state
-  const [selectedNamaLengkap, setSelectedNamaLengkap] = useState("");
-  const [selectEmailKetua, setselectEmailKetua] = useState(""); // Menambah state untuk Email Ketua team
-  const [phone, setPhone] = useState(""); // Menambah state untuk phone (Nomor WhatsApp)
-  const [selectNameSupervisor, setselectNameSupervisor] = useState(""); // Menambah state untuk Name Supervisor team
-  const [selectPhoneSupervisor, setSelectPhoneSupervisor] = useState(""); // Menambah state untuk phone (Nomor WhatsApp)
-  const [selectEmailSupervisor, setselectEmailSupervisor] = useState(""); // Menambah state untuk Email Supervisor team
-  const adminFee = 4500; // Biaya admin tetap
+  const [selectedMaxNamaLengkap, setselectedMaxNamaLengkap] = useState("");
+  const maxNameChars = 180; // batasan maksimal karakter
+  const [selectedMaxProject, setselectedMaxProject] = useState("");
+  const maxProjectChars = 160; // batasan maksimal karakter
 
-  const generateUniqueId = () => {
-    const timestamp = new Date().getTime();
-    return `AISEEF${timestamp}`;
-  };
-
-  const generateFormData = (
-    selectedCategory,
-    price,
-    uniqueId,
-    selectedNamaLengkap,
-    phone
-  ) => {
-    const formattedPrice = Math.max(Math.floor(price), 1);
-    const totalPrice = formattedPrice + adminFee;
-
-    // Memecah nama lengkap menjadi array berdasarkan baris
-    const names = selectedNamaLengkap.split("\n");
-
-    // Mengambil nama pertama sebagai Nama Ketua
-    const ketua = names.length > 0 ? names[0] : "";
-
-    return {
-      item_details: [
-        {
-          id: uniqueId,
-          name: selectedCategory,
-          price: formattedPrice.toString(),
-          quantity: "1",
-        },
-        {
-          id: `${uniqueId}-admin`,
-          name: "Admin Fee",
-          price: adminFee.toString(),
-          quantity: "1",
-        },
-      ],
-      customer_details: {
-        first_name: ketua, // Menggunakan nama pertama sebagai Nama Ketua
-        phone: phone,
-        notes: "Thankyou",
-      },
-      transaction_details: {
-        order_id: uniqueId,
-        gross_amount: totalPrice.toString(), // Menggunakan total harga
-      },
-    };
-  };
-
-  const generatePaymentLink = async () => {
-    if (
-      selectedCategory !== "AISEEF Online Competition" &&
-      selectedCategory !== "AISEEF Offline Competition" &&
-      selectedCategory !== "AISEEF Offline + Excursion"
-    ) {
-      alert("Anda harus memilih salah satu kategori.");
-      return;
-    }
-
-    if (!selectedNamaLengkap) {
-      alert("Nama lengkap harus diisi.");
-      return;
-    } else if (selectedNamaLengkap.length > 180) {
-      alert("Maksimal Penulisan Nama Ketua dan Anggota 180 karakter");
-    }
-
-    if (!phone) {
-      alert(
-        "Nomor telepon ketua tim harus diisi untuk membuat tautan pembayaran."
-      );
-      return; // Menghentikan eksekusi fungsi jika phone belum diisi
-    } else if (phone.length < 5 || phone.length > 20) {
-      alert(
-        "Nomor telepon harus memiliki panjang antara 5 hingga 20 karakter."
-      );
-      return; // Menghentikan eksekusi fungsi jika panjang phone tidak sesuai
-    }
-
-    if (!selectEmailKetua) {
-      alert("Email Ketua harus diisi.");
-      return;
-    }
-
-    if (!selectNameSupervisor) {
-      alert("Nama Pembimbing harus diisi.");
-      return;
-    }
-
-    if (!selectPhoneSupervisor) {
-      alert(
-        "Nomor telepon Pembimbing tim harus diisi untuk membuat tautan pembayaran."
-      );
-      return; // Menghentikan eksekusi fungsi jika phone belum diisi
-    } else if (
-      selectPhoneSupervisor.length < 5 ||
-      selectPhoneSupervisor.length > 20
-    ) {
-      alert(
-        "Nomor telepon pembimbing harus memiliki panjang antara 5 hingga 20 karakter."
-      );
-      return; // Menghentikan eksekusi fungsi jika panjang phone tidak sesuai
-    }
-
-    if (!selectEmailSupervisor) {
-      alert("Email Pembimbing harus diisi.");
-      return;
-    }
-
-    const newUniqueId = generateUniqueId(); // Menghasilkan uniqueId baru
-    setUniqueId(newUniqueId); // Menyimpan uniqueId baru ke state
-
-    const formData = generateFormData(
-      selectedCategory,
-      price,
-      newUniqueId,
-      selectedNamaLengkap,
-      phone
-    );
-
-    const secret = process.env.NEXT_PUBLIC_SECRET;
-    const encodedSecret = Buffer.from(secret).toString("base64");
-    const basicAuth = `Basic ${encodedSecret}`;
-
-    const apiUrl = `${process.env.NEXT_PUBLIC_API}/v1/payment-links`;
-
-    try {
-      const response = await fetch(apiUrl, {
-        method: "POST",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-          Authorization: basicAuth,
-        },
-        body: JSON.stringify(formData),
-      });
-
-      const responseData = await response.json();
-      console.log("Response Data:", responseData);
-      setPaymentUrl(responseData.payment_url);
-
-      const buttonInput = document.querySelector("form .buttonindo input");
-      buttonInput.style.display = "block";
-    } catch (error) {
-      console.error("Error saat mengirim permintaan:", error);
+  const handleInputNameChange = (e) => {
+    const { value } = e.target;
+    if (value.length <= maxNameChars) {
+      setselectedMaxNamaLengkap(value);
     }
   };
 
-  useEffect(() => {
-    if (selectedCategory === "AISEEF Online Competition") {
-      setPrice("100000");
-    } else if (selectedCategory === "AISEEF Offline Competition") {
-      setPrice("200000");
-    } else if (selectedCategory === "AISEEF Offline + Excursion") {
-      setPrice("500000");
-    } else {
-      setPrice("");
-    }
-  }, [selectedCategory]);
-
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
-  };
-
-  const handleSubmitForm = async (e) => {
-    e.preventDefault();
-    const scriptURL =
-      "https://script.google.com/macros/s/AKfycbzmJFF_At7dHbSksEFc11YzcrwCqx8XsP2ui2UHtdESpW9MNXGwXaTUFeSxDvq1aRBa/exec";
-    const form = document.forms["regist-form"];
-
-    if (form) {
-      try {
-        await fetch(scriptURL, { method: "POST", body: new FormData(form) });
-        form.reset();
-        setSelectedCategory("");
-        setPrice("");
-        setPaymentUrl("");
-        setUniqueId("");
-      } catch (error) {
-        console.error("Error saat mengirim data:", error);
-      }
+  const handleInputProjectChange = (e) => {
+    const { value } = e.target;
+    if (value.length <= maxProjectChars) {
+      setselectedMaxProject(value);
     }
   };
 
@@ -207,20 +32,25 @@ function IndoensiaParticipants() {
       "https://script.google.com/macros/s/AKfycbzmJFF_At7dHbSksEFc11YzcrwCqx8XsP2ui2UHtdESpW9MNXGwXaTUFeSxDvq1aRBa/exec";
 
     const form = document.forms["regist-form"];
+    var buttonCounter = 0;
 
     if (form) {
       const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-          await fetch(scriptURL, { method: "POST", body: new FormData(form) });
-
-          // Setelah berhasil mengirim data, arahkan pengguna ke halaman lain
-          window.location.href = "/"; // Gantikan dengan URL halaman sukses Anda
-        } catch (error) {
-          console.error("Error saat mengirim data:", error);
-          // Handle error jika diperlukan
+        if (buttonCounter == 0) {
+          try {
+            buttonCounter++;
+            await fetch(scriptURL, {
+              method: "POST",
+              body: new FormData(form),
+            });
+            // Setelah berhasil mengirim data, arahkan pengguna ke halaman lain
+            window.location.href = "/homeregist"; // Gantikan dengan URL halaman sukses Anda
+          } catch (error) {
+            console.error("Error saat mengirim data:", error);
+            // Handle error jika diperlukan
+          }
         }
-
         form.reset();
       };
 
@@ -246,13 +76,14 @@ function IndoensiaParticipants() {
       </div>
       {/* PAGE HEADER END */}
       <section className="registration-section">
-        <div className="container">
-          <div className="content">
-            <h1 className="sub">FORMULIR PENDAFTARAN</h1>
-            <h1 className="garis-bawah"></h1>
-            <br></br>
+        <div class="container">
+          <div class="content">
+            <div class="sub">FORMULIR PENDAFTARAN</div>
+            <h1 class="garis-bawah"></h1>
+            <br />
+            <br />
             <h4>
-              HALLO PESERTA AISEEF 2025, Mohon perhatikan informasi berikut ini
+              HALLO PESERTA GYIIF 2025, Mohon perhatikan informasi berikut ini
               sebelum mengisi formulir pendaftaran :
             </h4>
             <br />
@@ -281,7 +112,7 @@ function IndoensiaParticipants() {
               waktu pendaftaran, Letter of Acceptance (LOA) akan dikirimkan ke
               alamat email team leader.
             </p>
-            <br></br>
+            <br />
 
             <form name="regist-form">
               <h1>BIODATA</h1>
@@ -300,6 +131,36 @@ function IndoensiaParticipants() {
                     value="PESERTA INDONESIA"
                     readOnly
                   />
+                </div>
+                <div class="input-box">
+                  <label for="CATEGORY_COMPETITION" class="form-label">
+                    Kategori Kompetisi
+                  </label>
+                  <select
+                    type="text"
+                    id="CATEGORY_COMPETITION"
+                    name="CATEGORY_COMPETITION"
+                    class="form-control"
+                    placeholder="Choose Category Competition "
+                    required
+                  >
+                    <option value="">--Pilih Kategori Kompetisi--</option>
+                    <option value="Online Competition">
+                      Online Competition
+                    </option>
+                    <option value="Online Competition + Certificate and Medal">
+                      Online Competition + Certificate and Medal
+                    </option>
+                    <option value="Offline Competition">
+                      Offline Competition
+                    </option>
+                    <option value="Offline Competition + Full Package">
+                      Offline Competition + Full Package
+                    </option>
+                    <option value="Offline Competition + Excursion">
+                      Offline Competition + Excursion
+                    </option>
+                  </select>
                 </div>
               </div>
 
@@ -325,9 +186,12 @@ function IndoensiaParticipants() {
                     className="form-control"
                     placeholder="Masukan Nama Ketua & Anggota"
                     required
-                    value={selectedNamaLengkap}
-                    onChange={(e) => setSelectedNamaLengkap(e.target.value)} // Menambahkan handler onChange
+                    value={selectedMaxNamaLengkap}
+                    onChange={handleInputNameChange}
                   ></textarea>
+                  <p>
+                    {selectedMaxNamaLengkap.length} / {maxNameChars} character
+                  </p>
                 </div>
                 <div className="input-box">
                   <label htmlFor="LEADER_WHATSAPP" className="form-label">
@@ -350,12 +214,10 @@ function IndoensiaParticipants() {
                     className="form-control"
                     placeholder="Masukan Nomor WhatsApp Ketua Tim"
                     required
-                    value={phone}
-                    onChange={(e) => setPhone(e.target.value)} // Menambahkan handler onChange
                   />
                 </div>
-                <div className="input-box">
-                  <label for="LEADER_EMAIL" className="form-label">
+                <div class="input-box">
+                  <label for="LEADER_EMAIL" class="form-label">
                     Alamat Email Ketua Tim
                   </label>
                   <label>
@@ -369,11 +231,9 @@ function IndoensiaParticipants() {
                     type="email"
                     id="LEADER_EMAIL"
                     name="LEADER_EMAIL"
-                    className="form-control"
-                    placeholder="Masukan Alamat Email Ketua Tim"
+                    class="form-control"
+                    placeholder="Input Your Leader Email Address"
                     required
-                    value={selectEmailKetua}
-                    onChange={(e) => setselectEmailKetua(e.target.value)}
                   />
                 </div>
                 <div className="input-box">
@@ -495,19 +355,17 @@ function IndoensiaParticipants() {
               <h1>DATA PEMBIMBING</h1>
               <h1 className="garis-bawah"></h1>
               <div className="user-details">
-                <div className="input-box">
-                  <label for="NAME_SUPERVISOR" className="form-label">
+                <div class="input-box">
+                  <label for="NAME_SUPERVISOR" class="form-label">
                     Nama Guru/Pembimbing
                   </label>
                   <textarea
                     type="text"
                     id="NAME_SUPERVISOR"
                     name="NAME_SUPERVISOR"
-                    className="form-control"
+                    class="form-control"
                     placeholder="Masukan Nama Guru/Pembimbing"
                     required
-                    value={selectNameSupervisor}
-                    onChange={(e) => setselectNameSupervisor(e.target.value)}
                   ></textarea>
                 </div>
 
@@ -531,8 +389,6 @@ function IndoensiaParticipants() {
                     className="form-control"
                     placeholder="Masukan Nomor WhatsApp Guru/Pembimbing"
                     required
-                    value={selectPhoneSupervisor}
-                    onChange={(e) => setSelectPhoneSupervisor(e.target.value)}
                   />
                 </div>
 
@@ -547,116 +403,11 @@ function IndoensiaParticipants() {
                     className="form-control"
                     placeholder="Alamat Email Guru/Pembimbing"
                     required
-                    value={selectEmailSupervisor}
-                    onChange={(e) => setselectEmailSupervisor(e.target.value)}
                   />
                 </div>
               </div>
               {/* DATA PEMBIMBING END */}
               {/* DATA PEMBIMBING END */}
-
-              {/* INVOICE START */}
-              {/* INVOICE START */}
-              <div className="">
-                <h1>INVOICE</h1>
-                <h1 className="garis-bawah"></h1>
-              </div>
-              <div className="user-details">
-                <div className="input-box">
-                  <label html="CATEGORY_COMPETITION" className="form-label">
-                    Kategori Kompetisi
-                  </label>
-                  <select
-                    type="text"
-                    id="CATEGORY_COMPETITION"
-                    name="CATEGORY_COMPETITION"
-                    className="form-control"
-                    placeholder="Choose Category Competition"
-                    required
-                    onChange={handleCategoryChange}
-                    value={selectedCategory}
-                  >
-                    <option value="">--Pilih Kategori Kompetisi--</option>
-                    <option value="AISEEF Online Competition">
-                      Kompetisi Online
-                    </option>
-                    <option value="AISEEF Offline Competition">
-                      Kompetisi Offline
-                    </option>
-                    <option value="AISEEF Offline + Excursion">
-                      Kompetisi Offline + Excursion
-                    </option>
-                  </select>
-                </div>
-                <div className="mx-auto">
-                  <p className="fw-bold">
-                    *wajib di klik ketika sudah memilih kategori kompetisi
-                  </p>
-                  <button
-                    className="btn btn-custom"
-                    onClick={(e) => generatePaymentLink(e)}
-                    disabled={
-                      selectedCategory !== "AISEEF Online Competition" &&
-                      selectedCategory !== "AISEEF Offline Competition" &&
-                      selectedCategory !== "AISEEF Offline + Excursion"
-                    }
-                  >
-                    Buat Tautan Pembayaran
-                  </button>
-                </div>
-              </div>
-              <div className="user-details">
-                <div className="input-box">
-                  <label className="form-label">
-                    Biaya yang harus dibayarkan{" "}
-                    <span className="fw-bold">
-                      (Belum Termasuk biaya Admin)
-                    </span>
-                  </label>
-                  <input
-                    type="text"
-                    id="TOTAL_AMOUNT"
-                    name="TOTAL_AMOUNT"
-                    className="form-control"
-                    placeholder="Total Biaya"
-                    value={
-                      price
-                        ? (price / 1000).toLocaleString("id-ID", {
-                            style: "currency",
-                            currency: "IDR",
-                            minimumFractionDigits: 3,
-                          })
-                        : ""
-                    }
-                    readOnly
-                  />
-                </div>
-                <div className="input-box">
-                  <label className="form-label">INVOICE ID</label>
-                  <input
-                    type="text"
-                    id="ORDER_ID"
-                    name="ORDER_ID"
-                    className="form-control"
-                    placeholder="ID PEMBAYARAN"
-                    value={uniqueId}
-                    readOnly
-                  />
-                </div>
-                <div className="input-box invisible">
-                  <label className="form-label">Link Invoice</label>
-                  <input
-                    type="text"
-                    id="LINK_INVOICE"
-                    name="LINK_INVOICE"
-                    className="form-control"
-                    placeholder="Link Pembayaran"
-                    value={paymentUrl}
-                  />
-                </div>
-              </div>
-              {/* INVOICE END */}
-              {/* INVOICE END */}
 
               {/* DETAIL PROJECT START */}
               {/* DETAIL PROJECT START */}
@@ -779,7 +530,7 @@ function IndoensiaParticipants() {
                 </div>
                 <div className="input-box">
                   <label for="INFORMATION_RESOURCES" className="form-label">
-                    Sumber Informasi Kompetisi AISEEF 2025
+                    Sumber Informasi Kompetisi GYIIF 2025
                   </label>
                   <select
                     type="text"
@@ -791,16 +542,16 @@ function IndoensiaParticipants() {
                   >
                     <option value="">--Pilih Sumber Informasi--</option>
                     <option value="IYSA Instagram">IYSA Instagram</option>
-                    <option value="AISEEF Instagram">AISEEF Instagram</option>
+                    <option value="GYIIF Instagram">GYIIF Instagram</option>
                     <option value="Pembimbing/Sekolah">
                       Pembimbing/Sekolah
                     </option>
                     <option value="IYSA FaceBook">IYSA FaceBook</option>
                     <option value="IYSA Linkedin">IYSA Linkedin</option>
                     <option value="IYSA Website">IYSA Website</option>
-                    <option value="AISEEF Website">AISEEF Website</option>
+                    <option value="GYIIF Website">GYIIF Website</option>
                     <option value="IYSA Email">IYSA Email</option>
-                    <option value="AISEEF Email">AISEEF Email</option>
+                    <option value="GYIIF Email">GYIIF Email</option>
                     <option value="Acara Sebelumnya">Acara Sebelumnya</option>
                     <option value="Lainnya">Lainnya</option>
                   </select>
@@ -823,7 +574,7 @@ function IndoensiaParticipants() {
               {/* GENERAL INFORMATION END */}
               {/* GENERAL INFORMATION END */}
 
-              <div className="buttonindo">
+              <div className="button">
                 <input type="submit" value="KIRIM" />
               </div>
             </form>

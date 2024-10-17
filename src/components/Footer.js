@@ -53,6 +53,14 @@ class Footer extends Component {
                         >
                           +62 817-7091-4129
                         </a>
+                        <br/>
+                        <a
+                          href="https://wa.me/6288213248890"
+                          rel="noreferrer noopener"
+                          target="_blank"
+                        >
+                          +62 882-1324-8890
+                        </a>
                       </li>
                       <li>
                         <i className="fas fa-envelope"></i>
