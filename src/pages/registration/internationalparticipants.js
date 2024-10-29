@@ -29,23 +29,29 @@ export default function Internationalparticipants() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbzVAfpmxr87x5HmnEkylXr3jYznzBdMM_o4fiNiqOGeg9E3QLG6n7hIOPjOzQnQxE1g/exec";
+      "https://script.google.com/macros/s/AKfycbxXQFMm0k7n6kriq4HkjEGX7dXwWxFzeyjyTEZh6Q-XG8yOTCYe8oaM-T2sePR5rKU/exec";
 
     const form = document.forms["regist-form"];
+    var buttonCounter = 0;
+
 
     if (form) {
       const handleSubmit = async (e) => {
         e.preventDefault();
-        try {
-          await fetch(scriptURL, { method: "POST", body: new FormData(form) });
-
-          // Setelah berhasil mengirim data, arahkan pengguna ke halaman lain
-          window.location.href = "/"; // Gantikan dengan URL halaman sukses Anda
-        } catch (error) {
-          console.error("Error saat mengirim data:", error);
-          // Handle error jika diperlukan
+        if (buttonCounter == 0) {
+          try {
+            buttonCounter++;
+            await fetch(scriptURL, {
+              method: "POST",
+              body: new FormData(form),
+            });
+            // Setelah berhasil mengirim data, arahkan pengguna ke halaman lain
+            window.location.href = "/registration/homeregist"; // Gantikan dengan URL halaman sukses Anda
+          } catch (error) {
+            console.error("Error saat mengirim data:", error);
+            // Handle error jika diperlukan
+          }
         }
-
         form.reset();
       };
 
@@ -148,9 +154,6 @@ export default function Internationalparticipants() {
                     </option>
                     <option value="Offline Competition + Full Package">
                       Offline Competition + Full Package
-                    </option>
-                    <option value="Offline Competition + Excursion">
-                      Offline Competition + Excursion
                     </option>
                   </select>
                 </div>
@@ -468,18 +471,18 @@ export default function Internationalparticipants() {
                     required
                   >
                     <option value="">--Choose Categories--</option>
-                    <option value="Social Science">Social Science</option>
+                    <option value="Entrepreneur">Entrepreneur</option>
+                    <option value="Social Science">
+                      Social Science
+                    </option>
                     <option value="Environmental Science">
                       Environmental Science
                     </option>
-                    <option value="Innovation Science">
-                      Innovation Science
+                    <option value="Innovation Science">Innovation Science</option>
+                    <option value="Cluster Mechanical and Shipping">
+                      Cluster Mechanical and Shipping
                     </option>
-                    <option value="Life Sciences">Life Sciences</option>
-                    <option value="Engineering and Technology">
-                      Engineering and Technology
-                    </option>
-                    <option value="Physics">Physics</option>
+                    <option value="Industrial Application">Industrial Application</option>
                   </select>
                 </div>
                 <div class="input-box">

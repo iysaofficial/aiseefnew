@@ -29,7 +29,7 @@ function IndoensiaParticipants() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbzmJFF_At7dHbSksEFc11YzcrwCqx8XsP2ui2UHtdESpW9MNXGwXaTUFeSxDvq1aRBa/exec";
+      "https://script.google.com/macros/s/AKfycbwZtjk4k2SCcYfvcjS3L5ssmOSFDxuF_UMYWmmuZ7J4dpSa9Npe6vOjcPD9Ms6KaLx4/exec";
 
     const form = document.forms["regist-form"];
     var buttonCounter = 0;
@@ -45,7 +45,7 @@ function IndoensiaParticipants() {
               body: new FormData(form),
             });
             // Setelah berhasil mengirim data, arahkan pengguna ke halaman lain
-            window.location.href = "/homeregist"; // Gantikan dengan URL halaman sukses Anda
+            window.location.href = "/registration/homeregist"; // Gantikan dengan URL halaman sukses Anda
           } catch (error) {
             console.error("Error saat mengirim data:", error);
             // Handle error jika diperlukan
@@ -93,20 +93,13 @@ function IndoensiaParticipants() {
               dikirim sudah final dan tidak mengalami perubahan.
             </p>
             <p>
-              2. Pastikan{" "}
-              <span className="fw-bold">&quot;INVOICE ID&quot;</span> sudah
-              terbuat agar tombol untuk{" "}
-              <span className="fw-bold">&quot;KIRIM &quot;</span> data bisa
-              muncul.
-            </p>
-            <p>
-              3. Setelah memastikan data sudah benar, Anda dapat mengklik tombol
+              2. Setelah memastikan data sudah benar, Anda dapat mengklik tombol
               <span className="fw-bold"> &quot;KIRIM&quot;</span> cukup sekali
               saja. Jika data telah berhasil dikirimkan, Anda akan dipindahkan
               ke halaman lain.
             </p>
             <p>
-              4. Akan ada email informasi bahwa pendaftaran telah diterima yang
+              3. Akan ada email informasi bahwa pendaftaran telah diterima yang
               dikirimkan ke alamat email ketua tim, dan berkas akan divalidasi
               oleh tim kami. Mohon bersabar dan tunggu maksimal 3 hari setelah
               waktu pendaftaran, Letter of Acceptance (LOA) akan dikirimkan ke
@@ -148,17 +141,8 @@ function IndoensiaParticipants() {
                     <option value="Online Competition">
                       Online Competition
                     </option>
-                    <option value="Online Competition + Certificate and Medal">
-                      Online Competition + Certificate and Medal
-                    </option>
                     <option value="Offline Competition">
                       Offline Competition
-                    </option>
-                    <option value="Offline Competition + Full Package">
-                      Offline Competition + Full Package
-                    </option>
-                    <option value="Offline Competition + Excursion">
-                      Offline Competition + Excursion
                     </option>
                   </select>
                 </div>
@@ -433,7 +417,12 @@ function IndoensiaParticipants() {
                     className="form-control"
                     placeholder="Masukkan Judul Proyek Anda"
                     required
+                    value={selectedMaxProject}
+                    onChange={handleInputProjectChange}
                   ></textarea>
+                  <p>
+                    {selectedMaxProject.length} / {maxProjectChars} character
+                  </p>
                 </div>
                 <div className="input-box">
                   <label for="CATEGORIES" className="form-label">
@@ -447,7 +436,8 @@ function IndoensiaParticipants() {
                     placeholder="--Choose-- "
                     required
                   >
-                    <option value="">--Pilih Kategori--</option>
+                    <option value="">--Choose Categories--</option>
+                    <option value="Entrepreneur">Entrepreneur</option>
                     <option value="Social Science">Social Science</option>
                     <option value="Environmental Science">
                       Environmental Science
@@ -455,11 +445,12 @@ function IndoensiaParticipants() {
                     <option value="Innovation Science">
                       Innovation Science
                     </option>
-                    <option value="Life Sciences">Life Sciences</option>
-                    <option value="Engineering and Technology">
-                      Engineering and Technology
+                    <option value="Cluster Mechanical and Shipping">
+                      Cluster Mechanical and Shipping
                     </option>
-                    <option value="Physics">Physics</option>
+                    <option value="Industrial Application">
+                      Industrial Application
+                    </option>
                   </select>
                 </div>
                 <div className="input-box">

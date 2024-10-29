@@ -2656,7 +2656,7 @@ blockquote:before {
 }
 .dlab-topbar-left ul li a,
 .dlab-topbar-right ul li a {
-  color: #444444;
+  color: #fff;
 }
 .topbar-social li a {
   padding: 0 6px;

@@ -71,12 +71,20 @@ const Header = () => {
             <div className="dlab-topbar-left">
               <ul>
                 <li>
-                  <i className="fas fa-phone-alt m-r5"></i>
-                  +62 817-7091-4129
+                  <Link href="https://api.whatsapp.com/send/?phone=6288213248890&text&type=phone_number&app_absent=0" target="_blank">
+                    <i className="fas fa-phone-alt m-r5"></i>
+                    +62 882-1324-8890
+                  </Link>
+                </li>
+                <li>
+                  <Link href="https://api.whatsapp.com/send/?phone=6281770914129&text&type=phone_number&app_absent=0" target="_blank">
+                    <i className="fas fa-phone-alt m-r5"></i>
+                    +62 817-7091-4129
+                  </Link>
                 </li>
                 <li>
                   <i className="fas fa-map-marker-alt m-r5"></i>
-                  Jl. Kemang No. 63 RT 03 RW 06 Kp. Kekupu
+                  Jl. Kemang RT 03 RW 06 Kp. Kekupu
                 </li>
                 <li>
                   <i className="fas fa-globe m-r5"></i>
