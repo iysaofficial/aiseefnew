@@ -29,7 +29,7 @@ function IndoensiaParticipants() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbwZtjk4k2SCcYfvcjS3L5ssmOSFDxuF_UMYWmmuZ7J4dpSa9Npe6vOjcPD9Ms6KaLx4/exec";
+      "https://script.google.com/macros/s/AKfycbx9t_nbncf4zcoNE7PddSHuwwAuZmm3jF2XX0f86zg3UeiGKA3Yi2fE4mlXML-hU6Im/exec";
 
     const form = document.forms["regist-form"];
     var buttonCounter = 0;

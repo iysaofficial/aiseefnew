@@ -29,7 +29,7 @@ export default function Internationalparticipants() {
 
   useEffect(() => {
     const scriptURL =
-      "https://script.google.com/macros/s/AKfycbxXQFMm0k7n6kriq4HkjEGX7dXwWxFzeyjyTEZh6Q-XG8yOTCYe8oaM-T2sePR5rKU/exec";
+      "https://script.google.com/macros/s/AKfycbyBKVHxwZamCTiWCz5XOeN7cZ6YPApc5YbCJenJ_1GDO6jND2m6ccrjFpPMWOdbL9pc/exec";
 
     const form = document.forms["regist-form"];
     var buttonCounter = 0;
