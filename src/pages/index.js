@@ -13,6 +13,8 @@ import HomeOwlSlider from "@/components/HomeOwlSlider";
 const inter = Inter({ subsets: ["latin"] });
 
 const pic4 = "/assets/images/main/img.jpg";
+const pic5 = "/assets/images/main/time.jpg";
+const pic6 = "/assets/images/main/venueaisef.jpg";
 const bgimg2 = "/assets/images/background/bg-map.jpg";
 
 export default function Home() {
@@ -73,6 +75,7 @@ export default function Home() {
               </div>
             </div>
             {/* <!-- About Us End --> */}
+            
             {/* <!-- Our Services --> */}
             <div className="section-full content-inner-2" id="Categories">
               <div className="container">
@@ -100,6 +103,40 @@ export default function Home() {
                   </h2>
                 </div>
                 <PortfolioCarousel />
+              </div>
+            </div>
+            <div className="section-full bg-white content-inner-1 about-us">
+              <div className="container">
+                <div className="row">
+                  <div className="col-lg-7 col-md-8">
+                    <div className="about-box row">
+                      <div className="col-lg-4">
+                        <h2 className="box-title m-tb0">
+                          Time & Venue
+                          <span className="bg-primary"></span>
+                        </h2>
+                      </div>
+                      <div className="col-lg-5 col-md-4 about-img">
+                    <Image
+                      src={pic5}
+                      alt="About Us"
+                      layout="responsive"
+                      width={500}
+                      height={300}
+                    />
+                  </div>
+                    </div>
+                  </div>
+                  <div className="col-lg-5 col-md-4 about-img">
+                    <Image
+                      src={pic6}
+                      alt="About Us"
+                      layout="responsive"
+                      width={500}
+                      height={300}
+                    />
+                  </div>
+                </div>
               </div>
             </div>
             <div
