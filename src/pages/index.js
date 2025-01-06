@@ -14,7 +14,7 @@ const inter = Inter({ subsets: ["latin"] });
 
 const pic4 = "/assets/images/main/img.jpg";
 const pic5 = "/assets/images/main/time.jpg";
-const pic6 = "/assets/images/main/venueaisef.jpg";
+const pic6 = "/assets/images/main/venue.jpg";
 const bgimg2 = "/assets/images/background/bg-map.jpg";
 
 export default function Home() {
