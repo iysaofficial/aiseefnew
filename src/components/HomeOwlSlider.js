@@ -90,7 +90,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Open Registration 2025</b>
+                <b>Close Registration 2025</b>
                 <br />
               </h2>
 
@@ -102,12 +102,12 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a>
-              <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="/" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Regist
+                  Close Registration
                 </a>
               </Link>
             </div>
