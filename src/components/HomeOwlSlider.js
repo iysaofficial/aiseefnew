@@ -90,7 +90,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Close Registration 2025</b>
+                <b>Coming Soon 2025</b>
                 <br />
               </h2>
 
@@ -107,7 +107,7 @@ const HomeOwlSlider = () => {
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Close Registration
+                  Coming Soon
                 </a>
               </Link>
             </div>
@@ -132,7 +132,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Close Registration 2025</b>
+                <b>Coming Soon 2025</b>
                 <br />
               </h2>
 
@@ -149,7 +149,7 @@ const HomeOwlSlider = () => {
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                 Close Registration
+                 Coming Soon
                 </a>
               </Link>
             </div>
@@ -174,7 +174,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Close Registration 2025</b>
+                <b>Coming Soon 2025</b>
                 <br />
               </h2>
 
@@ -191,7 +191,7 @@ const HomeOwlSlider = () => {
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Close Registration
+                  Coming Soon
                 </a>
               </Link>
             </div>
