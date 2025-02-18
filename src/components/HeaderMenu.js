@@ -89,7 +89,7 @@ const HeaderMenu = () => {
                 rel="noreferrer noopener"
                 className="dez-page"
               >
-                Curation 2024
+                Curation 2025
               </a>
             </li>
             <li>
