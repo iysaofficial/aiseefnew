@@ -1,4 +1,4 @@
-import Link from 'next/link';
+import Link from "next/link";
 
 const HeaderMenu = () => {
   return (
@@ -6,30 +6,32 @@ const HeaderMenu = () => {
       <ul className="nav navbar-nav">
         <li>
           <Link href="/">
-            <span className="ti-home"></span> Home{' '}
+            <span className="ti-home"></span> Home{" "}
           </Link>
         </li>
 
         <li>
-          <Link href="/LoW/lowtahun">
-            List Of Winners
-          </Link>
+          <Link href="/LoW/lowtahun">List Of Winners</Link>
         </li>
 
         {/* PRESS RELEASE */}
         <li>
           <Link href="#">
             Media Coverage <i className="fa fa-chevron-down"></i>
-            {''}
+            {""}
           </Link>
           <ul className="sub-menu left">
             <li>
-              <Link href="/NewsPage/PageNews" rel="noreferrer" className="dez-page">
+              <Link
+                href="/NewsPage/PageNews"
+                rel="noreferrer"
+                className="dez-page"
+              >
                 News
               </Link>
             </li>
             <li>
-            <a
+              <a
                 href="https://drive.google.com/file/d/1C6sTdlLy8u4ZeUNAN5kMDqLaiqtwqG4c/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
@@ -77,9 +79,19 @@ const HeaderMenu = () => {
 
         <li>
           <Link href="#">
-            Curation <i className="fa fa-chevron-down"></i>{' '}
+            Curation <i className="fa fa-chevron-down"></i>{" "}
           </Link>
           <ul className="sub-menu left">
+            <li>
+              <a
+                href="https://drive.google.com/drive/folders/10NAGGgeOft-pzS2kKxJa5l54T0eyv4OH?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Curation 2024
+              </a>
+            </li>
             <li>
               <a
                 href="https://drive.google.com/drive/folders/1rD-txCe9HIgiw52Vm5Zq1uFfxTuNm0Yx?usp=drive_link"
@@ -129,11 +141,11 @@ const HeaderMenu = () => {
         </li>
         <li>
           <Link href="#">
-            Gallery <i className="fa fa-chevron-down"></i>{' '}
+            Gallery <i className="fa fa-chevron-down"></i>{" "}
           </Link>
           <ul className="sub-menu left">
             <li>
-            <a
+              <a
                 href="https://drive.google.com/drive/folders/1p4ScSEkdDtZ7nYSvO404Y85SmQC9VyG4?usp=sharing"
                 target="_blank"
                 rel="noreferrer noopener"
@@ -178,7 +190,7 @@ const HeaderMenu = () => {
         </li>
         <li>
           <Link href="#">
-            Certificate <i className="fa fa-chevron-down"></i>{' '}
+            Certificate <i className="fa fa-chevron-down"></i>{" "}
           </Link>
           <ul className="sub-menu left">
             <li>
