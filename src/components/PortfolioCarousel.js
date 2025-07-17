@@ -4,7 +4,7 @@ import Image from "next/image";
 import Lightbox from "react-spring-lightbox";
 
 const contentBlog = [
-  { images: "/assets/images/main/aisef1.jpg", desc: 2020, alt: "foto1" },
+  { images: "/assets/images/main/aisef17.JPG", desc: 2022, alt: "foto1" },
   { images: "/assets/images/main/aisef2.jpg", desc: 2024, alt: "foto2" },
   { images: "/assets/images/main/aisef3.jpg", desc: 2020, alt: "foto3" },
   { images: "/assets/images/main/aisef4.jpg", desc: 2020, alt: "foto4" },
@@ -19,6 +19,11 @@ const contentBlog = [
   { images: "/assets/images/main/23-12.jpg", desc: 2023, alt: "foto13" },
   { images: "/assets/images/main/23-13.jpg", desc: 2023, alt: "foto14" },
   { images: "/assets/images/main/23-14.jpg", desc: 2023, alt: "foto15" },
+  { images: "/assets/images/main/NISEEF AISEEF 2025-199.jpg", desc: 2025, alt: "foto16" },
+  { images: "/assets/images/main/NISEEF AISEEF 2025-195.jpg", desc: 2025, alt: "foto17" },
+  { images: "/assets/images/main/NISEEF AISEEF 2025-209.jpg", desc: 2025, alt: "foto18" },
+  { images: "/assets/images/main/NISEEF AISEEF 2025-174.jpg", desc: 2025, alt: "foto19" },
+  { images: "/assets/images/main/NISEEF AISEEF 2025-244.jpg", desc: 2025, alt: "foto20" },
 ];
 
 const PortfolioCarousel = () => {

@@ -5968,7 +5968,11 @@ ol.comment-list li.comment .comment-respond .comment-form p {
   padding-left: 40px;
 }
 .widget_getintuch li,
-.widget_getintuch b,
+.widget_getintuch b
+ {
+  display: block;
+  text-transform: lowercase;
+}
 .widget_getintuch strong {
   display: block;
   text-transform: capitalize;

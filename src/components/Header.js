@@ -77,12 +77,6 @@ const Header = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link href="https://api.whatsapp.com/send/?phone=6281770914129&text&type=phone_number&app_absent=0" target="_blank">
-                    <i className="fas fa-phone-alt m-r5"></i>
-                    +62 817-7091-4129
-                  </Link>
-                </li>
-                <li>
                   <i className="fas fa-map-marker-alt m-r5"></i>
                   Jl. Kemang RT 03 RW 06 Kp. Kekupu
                 </li>

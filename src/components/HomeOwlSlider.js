@@ -9,9 +9,9 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 // Gambar di folder public
-const Slider1 = "/assets/images/main/aisef2.jpg";
-const Slider2 = "/assets/images/main/aisef1.jpg";
-const Slider3 = "/assets/images/main/aisef3.jpg";
+const Slider1 = "/assets/images/main/NISEEF AISEEF 2025-244.jpg";
+const Slider2 = "/assets/images/main/aisef2.jpg";
+const Slider3 = "/assets/images/main/NISEEF AISEEF 2025-39.jpg";
 
 function SampleNextArrow(props) {
   const { onClick } = props;

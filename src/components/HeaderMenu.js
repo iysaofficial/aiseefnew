@@ -9,15 +9,13 @@ const HeaderMenu = () => {
             <span className="ti-home"></span> Home{" "}
           </Link>
         </li>
-
         <li>
           <Link href="/LoW/lowtahun">List Of Winners</Link>
         </li>
-
         {/* PRESS RELEASE */}
         <li>
           <Link href="#">
-            Media Coverage <i className="fa fa-chevron-down"></i>
+            Media<i className="fa fa-chevron-down"></i>
             {""}
           </Link>
           <ul className="sub-menu left">
@@ -27,7 +25,7 @@ const HeaderMenu = () => {
                 rel="noreferrer"
                 className="dez-page"
               >
-                News
+                News from Media
               </Link>
             </li>
             <li>

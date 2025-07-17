@@ -14,9 +14,7 @@ class Footer extends Component {
                   <div className="widget widget_services border-0">
                     <ul>
                       <li>
-                        <Link href="/">
-                          Close Registration
-                        </Link>
+                        <Link href="/">Coming Soon 2026</Link>
                       </li>
                       <li>
                         <Link href="/#Testimonial">Testimonials</Link>
@@ -40,7 +38,8 @@ class Footer extends Component {
                           target="_blank"
                         >
                           {" "}
-                          Jl. Kemang RT 03 RW 06
+                          Jalan Kemang RT. 03 RW. 06 Pasir Putih, Kecamatan
+                          Sawangan, Kota Depok, Jawa Barat 16511, Indonesia.
                         </a>{" "}
                       </li>
                       <li>
@@ -54,13 +53,6 @@ class Footer extends Component {
                           +62 882-1324-8890
                         </a>
                         <br />
-                        <a
-                          href="https://wa.me/6281770914129"
-                          rel="noreferrer noopener"
-                          target="_blank"
-                        >
-                          +62 817-7091-4129
-                        </a>
                       </li>
                       <li>
                         <i className="fas fa-envelope"></i>
