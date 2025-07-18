@@ -10,11 +10,132 @@ const Gambar5 = '/assets/images/News/PelajarLamongan.WebP';
 const Gambar6 = '/assets/images/News/et.png';
 const Gambar7 = '/assets/images/News/Onsoed.webp';
 const Gambar8 = '/assets/images/News/smpn1cilacap.jpg';
-const Gambar9 = '/assets/images/News/yo.jpeg';
+const Gambar9 = '/assets/images/News/yoo.png';
+const Gambar10 = '/assets/images/News/12025.jpg';
+const Gambar11 = '/assets/images/News/22025.webp';
+const Gambar12 = '/assets/images/News/32025.jpg';
+const Gambar13 = '/assets/images/News/42025.jpg';
+
 
 const CompListNews = () => {
   return (
     <>
+    {/* <h1 className="text-center mt-2 fw-bold">NEWS 2024</h1> */}
+      <div className="container mt-4">
+        <div className="row">
+          {/* list 1 awal */}
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div className="card">
+              <Image
+                src={Gambar10}
+                className="card-img-top img-fluid p-2"
+                alt="Gambar Berita 1"
+                width={200}
+                height={100}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  <Link href="/NewsPage/News6">
+                    MTsN 1 Pati Research Team wins silver medal at AISEEF 2025 International Event
+                  </Link>
+                </h5>
+                <p className="card-text">
+                  Pati (Kemenag) --- Another proud achievement was made by the Research Team of MTsN 1 Pati! They successfully made history by winning a silver medal in the Asean Innovative Science Environmental and Entrepreneur Fair (AISEEF) 2025...
+                </p>
+                <h1 className="btn-primary btn">
+                  <Link href="https://pendis.kemenag.go.id/madrasah/tim-riset-mtsn-1-pati-sabet-medali-perak-di-ajang-internasional-aiseef-2025">Read more</Link>
+                </h1>
+              </div>
+            </div>
+          </div>
+          {/* list 1 akhir */}
+
+          {/* List 2 awal */}
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div className="card">
+              <Image
+                src={Gambar11}
+                className="card-img-top img-fluid p-2"
+                alt="Gambar Berita 2"
+                width={200}
+                height={100}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  <Link href="/NewsPage/News7">
+                    SD Muhammadiyah Sapen wins ten medals at AISEEF 2025 event
+                  </Link>
+                </h5>
+                <p className="card-text">
+                  Krjogja.com - YOGYA - SD Muhammadiyah Sapen is getting more global after buying medals at the Asean Innovative Science, Environmental, and Entrepreneur Fair (AISEF) 2025. SD Muhammadiyah Sapen sent 10 teams....
+                </p>
+                <h1 className="btn-primary btn">
+                  <Link href="https://www.krjogja.com/sekolah/1245618304/sd-muhammadiyah-sapen-borong-sepuluh-medali-di-ajang-aiseef-2025">Read more</Link>
+                </h1>
+              </div>
+            </div>
+          </div>
+          {/* List 2 akhir */}
+
+          {/* List 3 awal */}
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div className="card">
+              <Image
+                src={Gambar12}
+                className="card-img-top img-fluid p-2"
+                alt="Gambar Berita 3"
+                width={200}
+                height={100}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  <Link href="/NewsPage/News8">
+                    SMA Negeri 1 Porong student wins gold at AISEEF 2025
+                  </Link>
+                </h5>
+                <p className="card-text">
+                  SIDOARJO (RadarJatim.id) - Starting from seeing Juwed fruit scattered uselessly, the benefits are not known by the people of Juwedkenongo Village, Porong, Sidoarjo. Students of SMA Negeri 1 Porong located...
+                </p>
+                <h1 className="btn-primary btn">
+                  <Link href="https://radarjatim.id/siswa-sma-negeri-1-porong-raih-emas-aiseef-2025/">Read more</Link>
+                </h1>
+              </div>
+            </div>
+          </div>
+          {/* List 3 akhir */}
+
+          {/* List 4 awal */}
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div className="card">
+              <Image
+                src={Gambar13}
+                className="card-img-top img-fluid p-2"
+                alt="Gambar Berita 4"
+                width={200}
+                height={100}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  <Link href="/NewsPage/News9">
+                    Two Students of Universitas Muhammadiyah Bulukumba Won Gold at AISEEF 2025
+                  </Link>
+                </h5>
+                <p className="card-text">
+                  
+PLUZ.ID, SEMARANG - Bulukumba students made another proud achievement in the international arena.
+
+Dhiya Lailatul Islami and Astria Amanda, English Education students of Universitas...
+                </p>
+                <h1 className="btn-primary btn">
+                  <Link href="https://pluz.id/2025/02/07/dua-mahasiswa-universitas-muhammadiyah-bulukumba-raih-emas-di-aiseef-2025/">Read more</Link>
+                </h1>
+              </div>
+            </div>
+          </div>
+          {/* List 4 akhir */}
+        </div>
+      </div>
+
       {/* <h1 className="text-center mt-2 fw-bold">NEWS 2024</h1> */}
       <div className="container mt-4">
         <div className="row">
