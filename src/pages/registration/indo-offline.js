@@ -553,15 +553,14 @@ function IndonesiaOffline() {
                     required
                   >
                     <option value="">--Choose Categories--</option>
+                    <option value="Entrepreneur">Entrepreneur</option>
                     <option value="Social Science">Social Science</option>
-                    <option value="Environmental Science">
-                      Environmental Science
-                    </option>
-                    <option value="Innovation Science">
-                      Innovation Science
-                    </option>
-                    <option value="Engineering">Engineering</option>
+                    <option value="Environment Science">Environment Science</option>
+                    <option value="Inovation Science">Inovation Science</option>
+                    <option value="Industrial Application">Industrial Application</option>
+                    <option value="Mathematics">Mathematics</option>
                     <option value="Life Science">Life Science</option>
+                    <option value="Physics, Energy and Engineering">Physics, Energy and Engineering</option>
                   </select>
                 </div>
 
