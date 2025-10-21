@@ -73,12 +73,7 @@ const HomeOwlSlider = () => {
     >
       <div className="item slide-item">
         <div className="slide-item-img">
-        <Image
-            src={Slider1}
-            alt="Slider Image 1"
-            width={1200}
-            height={800}
-          />
+          <Image src={Slider1} alt="Slider Image 1" width={1200} height={800} />
         </div>
 
         <div className="slide-content overlay-primary">
@@ -110,18 +105,22 @@ const HomeOwlSlider = () => {
                   Regist Here!
                 </a>
               </Link>
+
+              <a
+                href="https://drive.google.com/file/d/15pFq6pdV92j0LhJ5_P8-qTwgJCr3_t7-/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="site-button m-r10 white button-lg"
+              >
+                Guide Book
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div className="item slide-item">
         <div className="slide-item-img">
-          <Image
-            src={Slider2}
-            alt="Slider Image 2"
-            width={1200}
-            height={800}
-          />
+          <Image src={Slider2} alt="Slider Image 2" width={1200} height={800} />
         </div>
         <div className="slide-content overlay-primary">
           <div className="slide-content-box container">
@@ -149,21 +148,24 @@ const HomeOwlSlider = () => {
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                 Regist Here!
+                  Regist Here!
                 </a>
               </Link>
+              <a
+                href="https://drive.google.com/file/d/15pFq6pdV92j0LhJ5_P8-qTwgJCr3_t7-/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="site-button m-r10 white button-lg"
+              >
+                Guide Book
+              </a>
             </div>
           </div>
         </div>
       </div>
       <div className="item slide-item">
         <div className="slide-item-img">
-          <Image
-            src={Slider3}
-            alt="Slider Image 3"
-            width={1200}
-            height={800}
-          />
+          <Image src={Slider3} alt="Slider Image 3" width={1200} height={800} />
         </div>
         <div className="slide-content overlay-primary">
           <div className="slide-content-box container">
@@ -194,6 +196,14 @@ const HomeOwlSlider = () => {
                   Regist Here!
                 </a>
               </Link>
+              <a
+                href="https://drive.google.com/file/d/15pFq6pdV92j0LhJ5_P8-qTwgJCr3_t7-/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="site-button m-r10 white button-lg"
+              >
+                Guide Book
+              </a>
             </div>
           </div>
         </div>

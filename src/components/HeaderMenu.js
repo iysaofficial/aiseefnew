@@ -59,16 +59,6 @@ const HeaderMenu = () => {
 
         {/* PAGES */}
         <li>
-          <a
-            href="https://drive.google.com/file/d/1obc-HoXnL4naOFaoIHMG1jhW3SgAT4zL/view?usp=sharing"
-            target="_blank"
-            rel="noreferrer noopener"
-            className="dez-page"
-          >
-            Guide Book
-          </a>
-        </li>
-        <li>
           {/* <Link href="#">
             About AISEEF <i className="fa fa-chevron-down"></i>{' '}
           </Link> */}
