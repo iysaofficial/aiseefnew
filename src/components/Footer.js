@@ -14,7 +14,7 @@ class Footer extends Component {
                   <div className="widget widget_services border-0">
                     <ul>
                       <li>
-                        <Link href="/">Coming Soon 2026</Link>
+                        <Link href="/registration/homeregist">Regist here</Link>
                       </li>
                       <li>
                         <Link href="/#Testimonial">Testimonials</Link>

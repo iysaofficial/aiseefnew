@@ -90,7 +90,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Coming Soon 2026</b>
+                <b>Open Registration for 2026</b>
                 <br />
               </h2>
 
@@ -102,12 +102,12 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a>
-              <Link href="/" legacyBehavior>
+              <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Coming Soon
+                  Regist Here!
                 </a>
               </Link>
             </div>
@@ -132,7 +132,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Coming Soon 2026</b>
+                <b>Open Registration for 2026</b>
                 <br />
               </h2>
 
@@ -144,12 +144,12 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a>
-              <Link href="/" legacyBehavior>
+              <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                 Coming Soon
+                 Regist Here!
                 </a>
               </Link>
             </div>
@@ -174,7 +174,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Coming Soon 2026</b>
+                <b>Open Registration for 2026</b>
                 <br />
               </h2>
 
@@ -186,12 +186,12 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a>
-              <Link href="/" legacyBehavior>
+              <Link href="/registration/homeregist" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Coming Soon
+                  Regist Here!
                 </a>
               </Link>
             </div>

@@ -62,23 +62,23 @@ function HomeIndo() {
               className="btn btn-custom text-center me-lg-5 "
               onClick={() =>
                 handleOpenModal(
-                  "/registration/homeregist",
+                  "/registration/indo-online",
                   indonesiaOnlineTerms
                 )
               }
             >
-              Coming Soon<i className="fa-solid fa-earth-americas"></i>
+              Online Competition<i className="fa-solid fa-earth-americas"></i>
             </a>
             <a
               className="btn btn-custom text-center me-lg-5 "
               onClick={() =>
                 handleOpenModal(
-                  "/registration/homeregist",
+                  "/registration/indo-offline",
                   indonesiaOfflineTerms
                 )
               }
             >
-              Coming Soon<i className="fa-solid fa-earth-americas"></i>
+              Offline Competition<i className="fa-solid fa-earth-americas"></i>
             </a>
           </div>
         </div>

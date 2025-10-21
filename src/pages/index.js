@@ -54,12 +54,22 @@ export default function Home() {
                       </div>
                       <div className="col-lg-8">
                         <p>
-                          &quot;Innovation&quot; is a must in today&apos;s
-                          modern era. This simple word demands a huge result
-                          within creating a new work which is called
-                          &quot;Invention&quot;.
+                          Indonesian Young Scientist Association (IYSA) is deeply committed to nurturing young minds in the fields of education, scientific research, and applied innovation. We believe that innovation, environmental awareness, and entrepreneurial thinking are not just cognitive ideas, but powerful tools to drive meaningful change—especially when they challenge conventional norms and contribute to the advancement of civilization.
+                        </p>
+                        <p>
+                          To support this vision, IYSA organizes a variety of national and international competitions focused on discovery, creativity, and scientific development.
+                        </p>
+                        <p>
+                          One of these flagship events is the ASEAN INNOVATIVE SCIENCE ENVIRONMENTAL AND ENTREPRENEUR FAIR (AISEEF) — an international platform designed to inspire and empower students at all levels, from elementary to university, to showcase their research and innovative solutions to global challenges.
+                        </p>
+                        <p>
+                          Participants are invited to present their projects before a panel of expert judges, promoting not only critical thinking but also practical impact through science, environmental responsibility, and entrepreneurship.
+                        </p>
+                        <p>
+                          <strong>AISEEF is more than just a competition</strong> — it is a space for collaboration, learning, and the cultivation of future changemakers. Through this initiative, IYSA continues its mission to guide young generations in becoming thoughtful leaders and solution-driven innovators for a better world.
                         </p>
                       </div>
+
                     </div>
                   </div>
                   <div className="col-lg-5 col-md-4 about-img">
@@ -75,7 +85,7 @@ export default function Home() {
               </div>
             </div>
             {/* <!-- About Us End --> */}
-            
+
             {/* <!-- Our Services --> */}
             <div className="section-full content-inner-2" id="Categories">
               <div className="container">
