@@ -23,7 +23,7 @@ function HomeRegist() {
                 REGISTRATION FORM
               </h1>
               <h3 className="mx-auto mt-5 mb-2 text-sm md:text-lg lg:text-2xl">
-                Choose Your Citizenship Category for Registration AISEEF 2025
+                Choose Your Citizenship Category for Registration AISEEF 2026
               </h3>
             </div>
           </div>
