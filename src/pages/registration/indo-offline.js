@@ -49,10 +49,6 @@ function IndonesiaOffline() {
     switch (value) {
       case "Asean Innovative Science Environmental and Entrepreneur Fair - Offline Competition":
         break;
-      case "Asean Innovative Science Environmental and Entrepreneur Fair - Offline Competition + Excursion":
-        break;
-      case "Asean Innovative Science Environmental and Entrepreneur Fair - Offline Competition + FullPack":
-        break;
       default:
         break;
     }
@@ -250,12 +246,6 @@ function IndonesiaOffline() {
                     <option value="">--Choose Category Competition--</option>
                     <option value="Asean Innovative Science Environmental and Entrepreneur Fair - Offline Competition">
                       Offline Competition
-                    </option>
-                    <option value="Asean Innovative Science Environmental and Entrepreneur Fair - Offline Competition + Excursion">
-                      Offline Competition + Excursion
-                    </option>
-                    <option value="Asean Innovative Science Environmental and Entrepreneur Fair - Offline Competition + Fullpack">
-                      Offline Competition + Fullpack
                     </option>
                   </select>
                 </div>
