@@ -85,7 +85,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Open Registration for 2026</b>
+                <b>Close Registration for 2026</b>
                 <br />
               </h2>
 
@@ -97,12 +97,12 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a>
-              <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Regist Here!
+                  Close Regist
                 </a>
               </Link>
 
@@ -131,7 +131,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Open Registration for 2026</b>
+                <b>Close Registration for 2026</b>
                 <br />
               </h2>
 
@@ -143,12 +143,12 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a>
-              <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Regist Here!
+                  Close Regist
                 </a>
               </Link>
               <a
@@ -176,7 +176,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Open Registration for 2026</b>
+                <b>Close Registration for 2026</b>
                 <br />
               </h2>
 
@@ -188,12 +188,12 @@ const HomeOwlSlider = () => {
               >
                 After Movie
               </a>
-              <Link href="/registration/homeregist" legacyBehavior>
+              <Link href="" legacyBehavior>
                 <a
                   rel="noreferrer noopener"
                   className="site-button m-r10 white button-lg"
                 >
-                  Regist Here!
+                  Close Regist
                 </a>
               </Link>
               <a

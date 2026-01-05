@@ -63,7 +63,8 @@ function IndonesiaOffline() {
     }
   }, [router]);
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbxnfngcnNkJD2ueqJgOSuy9w49RYc1E1N2WacRurTvo7njEn2Ap6y2y3COOE1NRfYCY/exec";
+  // const scriptURL = "https://script.google.com/macros/s/AKfycbxnfngcnNkJD2ueqJgOSuy9w49RYc1E1N2WacRurTvo7njEn2Ap6y2y3COOE1NRfYCY/exec";
+  const scriptURL = "";
 
   useEffect(() => {
     const form = document.forms["regist-form"];
@@ -670,7 +671,7 @@ function IndonesiaOffline() {
               {/* GENERAL INFORMATION END */}
 
               <div className="button">
-                <input type="submit" value="SUBMIT FORM" />
+                <input type="submit" value="CLOSE" />
               </div>
             </form>
             {/* Loader dan Status Message */}

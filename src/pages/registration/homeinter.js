@@ -63,6 +63,20 @@ function HomeInter() {
           <div className="link-web mx-auto text-center">
             <a
               className="btn btn-custom text-center me-lg-5 "
+              onClick={() => handleOpenModal("/registration/homeinter")}
+            >
+              CLOSE<i className="fa-solid fa-earth-americas"></i>
+            </a>{" "}
+            <a
+              className="btn btn-custom text-center me-lg-5 "
+              onClick={() => handleOpenModal("/registration/homeinter")}
+            >
+              CLOSE<i className="fa-solid fa-earth-americas"></i>
+            </a>
+          </div>
+          {/* <div className="link-web mx-auto text-center">
+            <a
+              className="btn btn-custom text-center me-lg-5 "
               onClick={() => handleOpenModal("/registration/inter-online", internationalOnlineTerms)}
             >
               Online Competition<i className="fa-solid fa-earth-americas"></i>
@@ -73,7 +87,7 @@ function HomeInter() {
             >
               Offline Competition<i className="fa-solid fa-earth-americas"></i>
             </a>
-          </div>
+          </div> */}
         </div>
       </section>
 

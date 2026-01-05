@@ -28,7 +28,19 @@ function HomeRegist() {
             </div>
           </div>
           <div className="link-web mx-auto text-center">
-            <Link href="/registration/homeindo" legacyBehavior>
+            <Link href="" legacyBehavior>
+              <a className="btn btn-custom text-center me-lg-5 m-2">
+                CLOSE{" "}
+                <i className="fa-solid fa-earth-americas"></i>
+              </a>
+            </Link>
+            <Link href="" legacyBehavior>
+              <a className="btn btn-custom text-center me-lg-5 m-2">
+                CLOSE{" "}
+                <i className="fa-solid fa-earth-americas"></i>
+              </a>
+            </Link>
+            {/* <Link href="/registration/homeindo" legacyBehavior>
               <a className="btn btn-custom text-center me-lg-5 m-2">
                 INDONESIAN CITIZEN{" "}
                 <i className="fa-solid fa-earth-americas"></i>
@@ -39,7 +51,7 @@ function HomeRegist() {
                 INTERNATIONAL CITIZEN{" "}
                 <i className="fa-solid fa-earth-americas"></i>
               </a>
-            </Link>
+            </Link> */}
           </div>
         </div>
       </section>

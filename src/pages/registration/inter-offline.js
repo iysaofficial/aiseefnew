@@ -69,7 +69,8 @@ export default function InternationalOffline() {
     }
   }, [router]);
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbw_NyoDwBSqomFWgiz8x6aEo2P-ZntQQJG0kFNrWTLQM-Y-4iLqyDsFvry1va1IeWTx/exec";
+  // const scriptURL = "https://script.google.com/macros/s/AKfycbw_NyoDwBSqomFWgiz8x6aEo2P-ZntQQJG0kFNrWTLQM-Y-4iLqyDsFvry1va1IeWTx/exec";
+  const scriptURL = "";
 
   useEffect(() => {
     const form = document.forms["regist-form"];
@@ -682,7 +683,7 @@ export default function InternationalOffline() {
                 </div>
               </div>
               <div className="button">
-                <input type="submit" value="SUBMIT FORM" />
+                <input type="submit" value="CLOSE" />
               </div>
             </form>
 
