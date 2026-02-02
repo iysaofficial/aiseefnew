@@ -183,6 +183,16 @@ const HeaderMenu = () => {
           <ul className="sub-menu left">
             <li>
               <a
+                href="https://drive.google.com/drive/folders/1soqS02SicIFcYm9S-OVPLTisiXRBcGKO?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Certificate Supervisor 2026
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://drive.google.com/drive/folders/1EeBg8hO7NlSy87XZ5etAfL_EPd1chnZ6?usp=sharing"
                 target="_blank"
                 rel="noreferrer noopener"
