@@ -1,12 +1,10 @@
 import React from "react";
-import Link from "next/link";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PageTitle from "@/components/PageTitle";
-
 const bnr1 = "/assets/images/banner/bnr4.jpg";
 
-const lowtahun = () => {
+const offline2026 = () => {
   return (
     <>
       <Header />
@@ -20,71 +18,53 @@ const lowtahun = () => {
         </div>
         {/* <!-- inner page banner END --> */}
 
-        <div class="container page">
-          <div className="text-center">
-            <h3>Select by the year of the event you are participating in</h3>
-          </div>
-          <div className=" wrapper-btn text-center">
-            <Link href="/LoW/2026/kategori" legacyBehavior>
+          <div class="container page">
+            <div className="text-center">
+              <h3>Choose based on the Level of the Offline event you are participating in</h3>
+            </div>
+            <div className=" wrapper-btn text-center">
               <a
-                className="btn btn-primary site-button m-3"
-                style={{ fontSize: "22px", fontWeight: "bold" }}
-              >
-                {" "}
-                2026{" "}
-              </a>
-            </Link>
-            <Link href="/LoW/2025/kategori" legacyBehavior>
-              <a
-                className="btn btn-primary site-button m-3"
-                style={{ fontSize: "22px", fontWeight: "bold" }}
-              >
-                {" "}
-                2025{" "}
-              </a>
-            </Link>
-            <Link href="/LoW/2024/kategori" legacyBehavior>
-              <a
-                className="btn btn-primary site-button m-3"
-                style={{ fontSize: "22px", fontWeight: "bold" }}
-              >
-                {" "}
-                2024{" "}
-              </a>
-            </Link>
-
-            <Link
-              href="https://drive.google.com/file/d/1yDfiFMAUrV8GKDapO9iwGMsm6dRnLWB5/view?usp=sharing"
-              legacyBehavior
-            >
-              <a
+                href="https://drive.google.com/file/d/14lU832LCysoPIPHYvsCBTRahFJC7muZq/view?usp=sharing"
                 target="_blank"
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
               >
                 {" "}
-                2023{" "}
+                University{" "}
               </a>
-            </Link>
-            <Link
-              href="https://drive.google.com/file/d/1qXpDh4KdiyINGBL7nQFxZNFIa9OL-7k0/view?usp=sharing"
-              legacyBehavior
-            >
               <a
+                href="https://drive.google.com/file/d/1TfcgjXYHbqv376b_rbvlbpEpIYQ44AkT/view?usp=sharing"
                 target="_blank"
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
               >
                 {" "}
-                2022{" "}
+                Senior High School{" "}
               </a>
-            </Link>
+              <a
+                href="https://drive.google.com/file/d/1oSPyg3E5wCdH9lLahjwmCdn0hHcGBO8t/view?usp=sharing"
+                target="_blank"
+                className="btn btn-primary site-button m-3"
+                style={{ fontSize: "22px", fontWeight: "bold" }}
+              >
+                {" "}
+                Junior High School{" "}
+              </a>
+              <a
+                href="https://drive.google.com/file/d/1Rmbua418HZtARYgwya4iSeRMy3ZGlPo8/view?usp=sharing"
+                target="_blank"
+                className="btn btn-primary site-button m-3"
+                style={{ fontSize: "22px", fontWeight: "bold" }}
+              >
+                {" "}
+                Elementary{" "}
+              </a>
+            </div>
           </div>
         </div>
-      </div>
       <Footer />
     </>
   );
 };
 
-export default lowtahun;
+export default offline2026;
