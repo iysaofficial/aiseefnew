@@ -90,7 +90,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <a
-                href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
+                href="https://youtu.be/LAvjaf3Ztjs?si=4nFmtyUo3JITJ5n9"
                 rel="noreferrer noopener"
                 target="_blank"
                 className="site-button m-r10 white button-lg"
@@ -136,7 +136,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <a
-                href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
+                href="https://youtu.be/LAvjaf3Ztjs?si=4nFmtyUo3JITJ5n9"
                 rel="noreferrer noopener"
                 target="_blank"
                 className="site-button m-r10 white button-lg"
@@ -181,7 +181,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <a
-                href="https://youtu.be/xA5kvu-72RU?si=K0pRjFolVOR4-aT5"
+                href="https://youtu.be/LAvjaf3Ztjs?si=4nFmtyUo3JITJ5n9"
                 rel="noreferrer noopener"
                 target="_blank"
                 className="site-button m-r10 white button-lg"

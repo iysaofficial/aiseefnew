@@ -30,6 +30,14 @@ const HeaderMenu = () => {
             </li>
             <li>
               <a
+                href="https://drive.google.com/file/d/1pYeHOzLHV0a9x0n0-TFUFFNjJqH6eJVY/view?usp=drive_link"
+                target="_blank"
+                rel="noreferrer"
+                className="dez-page"
+              >
+                Press Release 2026
+              </a>
+              <a
                 href="https://drive.google.com/file/d/1C6sTdlLy8u4ZeUNAN5kMDqLaiqtwqG4c/view?usp=sharing"
                 target="_blank"
                 rel="noreferrer"
