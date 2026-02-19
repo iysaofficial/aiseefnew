@@ -199,12 +199,22 @@ const HeaderMenu = () => {
           <ul className="sub-menu left">
             <li>
               <a
+                href="https://drive.google.com/drive/folders/1G_4k2mxKzR-HLUOulT-_d45U6ndrMn_F?usp=drive_link"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Certificate SPV OFFLINE 2026
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://drive.google.com/drive/folders/1soqS02SicIFcYm9S-OVPLTisiXRBcGKO?usp=sharing"
                 target="_blank"
                 rel="noreferrer noopener"
                 className="dez-page"
               >
-                Certificate Supervisor 2026
+                Certificate SPV ONLINE 2026
               </a>
             </li>
             <li>
@@ -214,7 +224,7 @@ const HeaderMenu = () => {
                 rel="noreferrer noopener"
                 className="dez-page"
               >
-                Certificate Supervisor 2025
+                Certificate SPV ONLINE 2025
               </a>
             </li>
           </ul>
