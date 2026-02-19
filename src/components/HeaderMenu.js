@@ -142,6 +142,14 @@ const HeaderMenu = () => {
           <ul className="sub-menu left">
             <li>
               <a
+                href="https://drive.google.com/drive/folders/1sLS_7Oliehc0Hvy0SDuuPSfdhVwH5_vv?usp=drive_link"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Gallery 2026
+              </a>
+              <a
                 href="https://drive.google.com/drive/folders/1p4ScSEkdDtZ7nYSvO404Y85SmQC9VyG4?usp=sharing"
                 target="_blank"
                 rel="noreferrer noopener"

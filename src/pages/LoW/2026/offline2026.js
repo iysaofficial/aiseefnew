@@ -24,7 +24,7 @@ const offline2026 = () => {
             </div>
             <div className=" wrapper-btn text-center">
               <a
-                href="https://drive.google.com/file/d/14lU832LCysoPIPHYvsCBTRahFJC7muZq/view?usp=sharing"
+                href="https://drive.google.com/file/d/16S72vhOFDahEks_qA0T6t7a4SRSX_lTx/view?usp=drive_link"
                 target="_blank"
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
@@ -33,15 +33,15 @@ const offline2026 = () => {
                 University{" "}
               </a>
               <a
-                href="https://drive.google.com/file/d/1TfcgjXYHbqv376b_rbvlbpEpIYQ44AkT/view?usp=sharing"
+                href="https://drive.google.com/file/d/1bvuEQRijx2RXpLC4aSBFA_S8uoYhFkr0/view?usp=drive_link"
                 target="_blank"
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
               >
                 {" "}
-                Senior High School{" "}
+                Secondary{" "}
               </a>
-              <a
+              {/* <a
                 href="https://drive.google.com/file/d/1oSPyg3E5wCdH9lLahjwmCdn0hHcGBO8t/view?usp=sharing"
                 target="_blank"
                 className="btn btn-primary site-button m-3"
@@ -49,9 +49,9 @@ const offline2026 = () => {
               >
                 {" "}
                 Junior High School{" "}
-              </a>
+              </a> */}
               <a
-                href="https://drive.google.com/file/d/1Rmbua418HZtARYgwya4iSeRMy3ZGlPo8/view?usp=sharing"
+                href="https://drive.google.com/file/d/1rWRZvSYpHd0SfyjPhr4kBMapWQPbdqM6/view?usp=drive_link"
                 target="_blank"
                 className="btn btn-primary site-button m-3"
                 style={{ fontSize: "22px", fontWeight: "bold" }}
