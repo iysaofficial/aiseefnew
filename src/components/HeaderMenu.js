@@ -80,6 +80,16 @@ const HeaderMenu = () => {
           <ul className="sub-menu left">
             <li>
               <a
+                href="https://drive.google.com/drive/folders/1PovSjRqc4mUXahUxysuEBn26wAJjZLSp?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Curation 2026
+              </a>
+            </li>
+            <li>
+              <a
                 href="https://drive.google.com/drive/folders/10NAGGgeOft-pzS2kKxJa5l54T0eyv4OH?usp=sharing"
                 target="_blank"
                 rel="noreferrer noopener"
