@@ -79,6 +79,19 @@ const lowtahun = () => {
                 2022{" "}
               </a>
             </Link>
+            <Link
+              href="https://drive.google.com/file/d/1baQhj7hME-y9-OAINLgIVjawk-SmkANl/view?usp=sharing"
+              legacyBehavior
+            >
+              <a
+                target="_blank"
+                className="btn btn-primary site-button m-3"
+                style={{ fontSize: "22px", fontWeight: "bold" }}
+              >
+                {" "}
+                2021{" "}
+              </a>
+            </Link>
           </div>
         </div>
       </div>
