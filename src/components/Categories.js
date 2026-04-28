@@ -53,7 +53,7 @@ const Categories = () => {
 
           <div className="box-item-service text-center">
             <div className="item-service-content m-b40">
-              <h5>Social Science</h5>
+              <h5>Social Sciences</h5>
               <div className="icon-bx-md radius border-1 m-b20 m-t0">
                 <span className="icon-cell">
                   <i className="fas fa-users"></i>
@@ -64,7 +64,7 @@ const Categories = () => {
 
           <div className="box-item-service text-center">
             <div className="item-service-content m-b40">
-              <h5>Environment Science</h5>
+              <h5>Environment Sciences</h5>
               <div className="icon-bx-md radius border-1 m-t40 m-b20">
                 <span className="icon-cell">
                   <i className="fas fa-leaf"></i>
@@ -75,7 +75,7 @@ const Categories = () => {
 
           <div className="box-item-service text-center">
             <div className="item-service-content m-b40">
-              <h5>Inovation Science</h5>
+              <h5>Innovation Sciences</h5>
               <div className="icon-bx-md radius border-1 m-b20 m-t0">
                 <span className="icon-cell">
                   <i className="fas fa-lightbulb"></i>
@@ -108,7 +108,7 @@ const Categories = () => {
 
           <div className="box-item-service text-center">
             <div className="item-service-content m-b40">
-              <h5>Life Science</h5>
+              <h5>Life Sciences</h5>
               <div className="icon-bx-md radius border-1 m-t40 m-b20">
                 <span className="icon-cell">
                   <i className="fas fa-dna"></i>

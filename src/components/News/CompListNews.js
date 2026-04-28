@@ -27,6 +27,78 @@ const CompListNews = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div className="card">
               <Image
+                src= "https://res.cloudinary.com/dtik1z1qd/image/upload/v1777358387/aiseef1_etujq7.jpg"
+                className="card-img-top img-fluid p-2"
+                alt="Gambar Berita 1"
+                width={200}
+                height={100}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  <Link href="/NewsPage/News6">
+                    Mahasiswa Keperawatan UMS Raih Prestasi Internasional pada Ajang AISEEF 2026
+                  </Link>
+                </h5>
+                <p className="card-text">
+                  Program Studi Keperawatan Universitas Muhammadiyah Surakarta. Tim mahasiswa berhasil menorehkan prestasi gemilang dalam ajang internasional ASEAN Innovation Science, Environmental & Entrepreneur Fair 2026 (AISEEF 2026), sebagai bentuk nyata kontribusi generasi muda dalam pengembangan ilmu pengetahuan dan inovasi di bidang kesehatan.
+                </p>
+                <h1 className="btn-primary btn">
+                  <Link href="https://keperawatan.ums.ac.id/mahasiswa-keperawatan-ums-raih-prestasi-internasional-pada-ajang-aiseef-2026/">Read more</Link>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div className="card">
+              <Image
+                src="https://res.cloudinary.com/dtik1z1qd/image/upload/v1777358387/aiseef2_tdn4g0.webp"
+                className="card-img-top img-fluid p-2"
+                alt="Gambar Berita 1"
+                width={200}
+                height={100}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  <Link href="/NewsPage/News6">
+                    SMP Labschool Cibubur Raih Prestasi Gemilang di Ajang NISEEF dan AISEEF 2026
+                  </Link>
+                </h5>
+                <p className="card-text">
+                 Semarang, JurnalPost.com – Murid SMP Labschool Cibubur kembali menorehkan prestasi membanggakan di kancah nasional dan internasional. Dalam ajang NISEEF (National Innovative Science Environmental and Entrepreneur Fair) dan AISEEF (ASEAN Innovative Science Environmental and Entrepreneur Fair) yang digelar pada 9–12 Februari 2026 di Universitas Diponegoro (UNDIP), Semarang.
+                </p>
+                <h1 className="btn-primary btn">
+                  <Link href="https://jurnalpost.com/smp-labschool-cibubur-raih-prestasi-gemilang-di-ajang-niseef-dan-aiseef-2026/90861/">Read more</Link>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div className="card">
+              <Image
+                src="https://res.cloudinary.com/dtik1z1qd/image/upload/v1777358386/aiseef3_u8jiux.jpg"
+                className="card-img-top img-fluid p-2"
+                alt="Gambar Berita 1"
+                width={200}
+                height={100}
+              />
+              <div className="card-body">
+                <h5 className="card-title">
+                  <Link href="/NewsPage/News6">
+                    Madrasah Mendunia! Tim Riset MAN 2 Kebumen Raih Silver Medal di Ajang AISEEF 2026
+                  </Link>
+                </h5>
+                <p className="card-text">
+                MAN 2 KEBUMEN – Prestasi internasional kembali diraih oleh tim riset Madrasah Aliyah Negeri (MAN) 2 Kebumen. Pada ajang ASEAN Innovative Science, Environmental and Entrepreneur Fair (AISEEF) 2026, yang diselenggarakan pada 7–11 Februari 2026 di Universitas Diponegoro, Semarang, tim yang terdiri dari empat siswa MAN 2 Kebumen berhasil meraih medali perak.
+                </p>
+                <h1 className="btn-primary btn">
+                  <Link href="https://www.man2kebumen.sch.id/2026/02/madrasah-mendunia-tim-riset-man-2.html">Read more</Link>
+                </h1>
+              </div>
+            </div>
+          </div>
+          <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
+            <div className="card">
+              <Image
                 src={Gambar10}
                 className="card-img-top img-fluid p-2"
                 alt="Gambar Berita 1"

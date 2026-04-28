@@ -108,7 +108,7 @@ export default function Home() {
                   <h4 className="text-gray-dark m-b10">Event Story</h4>
                   <h2 className="box-title m-tb0">
                     Our Success Event
-                    <br /> 2020 - 2025
+                    <br /> 2020 - 2026
                     <span className="bg-primary"></span>
                   </h2>
                 </div>
