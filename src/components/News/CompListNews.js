@@ -27,7 +27,7 @@ const CompListNews = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div className="card">
               <Image
-                src= "https://res.cloudinary.com/dtik1z1qd/image/upload/v1777358387/aiseef1_etujq7.jpg"
+                src= "https://ik.imagekit.io/iysaimg/ASSET%20IYSA/aiseef1_etujq7.jpg?updatedAt=1781963587493"
                 className="card-img-top img-fluid p-2"
                 alt="Gambar Berita 1"
                 width={200}
@@ -51,7 +51,7 @@ const CompListNews = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div className="card">
               <Image
-                src="https://res.cloudinary.com/dtik1z1qd/image/upload/v1777358387/aiseef2_tdn4g0.webp"
+                src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/aiseef2_tdn4g0.webp?updatedAt=1781963587508"
                 className="card-img-top img-fluid p-2"
                 alt="Gambar Berita 1"
                 width={200}
@@ -75,7 +75,7 @@ const CompListNews = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div className="card">
               <Image
-                src="https://res.cloudinary.com/dtik1z1qd/image/upload/v1777358386/aiseef3_u8jiux.jpg"
+                src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/aiseef3_u8jiux.jpg?updatedAt=1781963587465"
                 className="card-img-top img-fluid p-2"
                 alt="Gambar Berita 1"
                 width={200}
