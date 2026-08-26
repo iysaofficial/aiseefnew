@@ -15,6 +15,9 @@ const Gambar10 = '/assets/images/News/12025.jpg';
 const Gambar11 = '/assets/images/News/22025.webp';
 const Gambar12 = '/assets/images/News/32025.jpg';
 const Gambar13 = '/assets/images/News/42025.jpg';
+const Gambar14 = '/assets/images/News/aiseef1_etujq7.jpg';
+const Gambar15 = '/assets/images/News/aiseef2_tdn4g0.webp';
+const Gambar16 = '/assets/images/News/aiseef3_u8jiux.jpg';
 
 
 const CompListNews = () => {
@@ -27,7 +30,7 @@ const CompListNews = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div className="card">
               <Image
-                src= "https://ik.imagekit.io/iysaimg/ASSET%20IYSA/aiseef1_etujq7.jpg?updatedAt=1781963587493"
+                src={Gambar14}
                 className="card-img-top img-fluid p-2"
                 alt="Gambar Berita 1"
                 width={200}
@@ -51,7 +54,7 @@ const CompListNews = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div className="card">
               <Image
-                src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/aiseef2_tdn4g0.webp?updatedAt=1781963587508"
+                src={Gambar15}
                 className="card-img-top img-fluid p-2"
                 alt="Gambar Berita 1"
                 width={200}
@@ -75,7 +78,7 @@ const CompListNews = () => {
           <div className="col-lg-3 col-md-6 col-sm-12 mb-4">
             <div className="card">
               <Image
-                src="https://ik.imagekit.io/iysaimg/ASSET%20IYSA/aiseef3_u8jiux.jpg?updatedAt=1781963587465"
+                src={Gambar16}
                 className="card-img-top img-fluid p-2"
                 alt="Gambar Berita 1"
                 width={200}
