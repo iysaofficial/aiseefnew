@@ -10,7 +10,7 @@ import AccordionBlog3 from "@/components/Element/AccordionBlog3";
 
 const bnr1 = "/assets/images/banner/bnr4.jpg";
 const pattern = "/assets/images/pattern/pic1.jpg";
-const about = "/assets/images/about/pict100.png";
+const about = "/assets/images/about/pict100.jpg";
 
 class Faqs extends Component {
   render() {
