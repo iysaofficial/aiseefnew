@@ -65,12 +65,42 @@ const HeaderMenu = () => {
           </ul>
         </li>
 
-        {/* PAGES */}
         <li>
-          {/* <Link href="#">
-            About AISEEF <i className="fa fa-chevron-down"></i>{' '}
-          </Link> */}
-          {/* className="sub-menu left" */}
+          <Link href="#">
+            Guidebook <i className="fa fa-chevron-down"></i>{" "}
+          </Link>
+          <ul className="sub-menu left">
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1JElLI07u0s1DpQW6mvtlHdNAJ8AdAevD/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Guidebook 2026
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1obc-HoXnL4naOFaoIHMG1jhW3SgAT4zL/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Guidebook 2025
+              </a>
+            </li>
+            <li>
+              <a
+                href="https://drive.google.com/file/d/1ZAuWuuEdh7scQxEU0lGDRrNrjeqz3PuA/view?usp=sharing"
+                target="_blank"
+                rel="noreferrer noopener"
+                className="dez-page"
+              >
+                Guidebook 2024
+              </a>
+            </li>
+          </ul>
         </li>
 
         <li>

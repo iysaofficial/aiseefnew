@@ -85,7 +85,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Close Registration for 2026</b>
+                <b>Coming Soon 2027</b>
                 <br />
               </h2>
 
@@ -131,7 +131,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Close Registration for 2026</b>
+                <b>Coming Soon 2027</b>
                 <br />
               </h2>
 
@@ -176,7 +176,7 @@ const HomeOwlSlider = () => {
               </h2>
 
               <h2 className="text-white font-weight-400">
-                <b>Close Registration for 2026</b>
+                <b>Coming Soon 2027</b>
                 <br />
               </h2>
 
