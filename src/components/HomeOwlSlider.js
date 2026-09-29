@@ -150,14 +150,16 @@ const HomeOwlSlider = ({ identitas = null, guidebook = null }) => {
                 <br />
               </h2>
 
-              <a
-                href="https://youtu.be/LAvjaf3Ztjs?si=4nFmtyUo3JITJ5n9"
-                rel="noreferrer noopener"
-                target="_blank"
-                className="site-button m-r10 white button-lg"
-              >
-                After Movie
-              </a>
+              {/* Tombol "After Movie" dihapus.
+
+                  Sorotan ini menyisakan tepat dua tombol, sama dengan GYIIF:
+                  satu menuju pendaftaran, satu menuju buku panduan — keduanya
+                  dibaca dari dasbor. Tautan video adalah satu-satunya yang
+                  tersisa yang dipaku di kode, dan ia tidak punya hubungan
+                  dengan apa pun yang dasbor ketahui, jadi ia cuma menambah
+                  satu hal lagi yang harus diingat orang saat edisi berganti.
+
+                  Videonya tetap ada di menu Media. */}
               <Link href="/registration/homeregist" legacyBehavior>
                 <a className="site-button m-r10 white button-lg">
                   {buka ? `Register Now ${tahun}` : `Coming Soon ${tahun}`}
@@ -203,14 +205,6 @@ const HomeOwlSlider = ({ identitas = null, guidebook = null }) => {
                 <br />
               </h2>
 
-              <a
-                href="https://youtu.be/LAvjaf3Ztjs?si=4nFmtyUo3JITJ5n9"
-                rel="noreferrer noopener"
-                target="_blank"
-                className="site-button m-r10 white button-lg"
-              >
-                After Movie
-              </a>
               <Link href="/registration/homeregist" legacyBehavior>
                 <a className="site-button m-r10 white button-lg">
                   {buka ? `Register Now ${tahun}` : `Coming Soon ${tahun}`}
@@ -255,14 +249,6 @@ const HomeOwlSlider = ({ identitas = null, guidebook = null }) => {
                 <br />
               </h2>
 
-              <a
-                href="https://youtu.be/LAvjaf3Ztjs?si=4nFmtyUo3JITJ5n9"
-                rel="noreferrer noopener"
-                target="_blank"
-                className="site-button m-r10 white button-lg"
-              >
-                After Movie
-              </a>
               <Link href="/registration/homeregist" legacyBehavior>
                 <a className="site-button m-r10 white button-lg">
                   {buka ? `Register Now ${tahun}` : `Coming Soon ${tahun}`}
