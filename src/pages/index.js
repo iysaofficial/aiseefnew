@@ -9,6 +9,7 @@ import PortfolioCarousel from "@/components/PortfolioCarousel";
 import Categories from "@/components/Categories";
 import ImgCarouselContent from "@/components/ImgCarouselContent";
 import HomeOwlSlider from "@/components/HomeOwlSlider";
+import { ambilIdentitas } from "@/lib/dashboardApi";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,7 +18,7 @@ const pic5 = "/assets/images/main/time.jpg";
 const pic6 = "/assets/images/main/venue.jpg";
 const bgimg2 = "/assets/images/background/bg-map.jpg";
 
-export default function Home() {
+export default function Home({ identitas }) {
   return (
     <>
       <Head>
@@ -33,7 +34,7 @@ export default function Home() {
         <div className="page-content bg-white">
           {/*  Slider Banner */}
           <div className="owl-slider-banner main-slider">
-            <HomeOwlSlider />
+            <HomeOwlSlider identitas={identitas} />
           </div>
           {/*  Slider Banner */}
           <div className="content-block">
@@ -184,4 +185,18 @@ export default function Home() {
       <Footer />
     </>
   );
+}
+
+/**
+ * Identitas edisi ditarik saat halaman dibangun ulang, bukan tiap kunjungan.
+ *
+ * Satu menit: togel pendaftaran diterbitkan dari dasbor, dan yang menekannya
+ * menunggu halaman ini berubah. Sorotannya menariknya sekali lagi di peramban
+ * supaya tidak ada yang perlu menunggu jendela itu lewat.
+ */
+export async function getStaticProps() {
+  return {
+    props: { identitas: await ambilIdentitas() },
+    revalidate: 60,
+  };
 }
