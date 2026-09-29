@@ -68,16 +68,24 @@ function SamplePrevArrow(props) {
  * bekerja, sementara guidebook edisi ini belum diterbitkan dari dasbor.
  * Menggantinya berarti menghilangkan tombol yang berfungsi.
  */
-const HomeOwlSlider = ({ identitas = null }) => {
+const HomeOwlSlider = ({ identitas = null, guidebook = null }) => {
   const [identitasKini, setIdentitasKini] = useState(identitas);
+  const [panduan, setPanduan] = useState(guidebook);
 
   useEffect(() => {
     let hidup = true;
     (async () => {
       try {
-        const { ambilIdentitas } = await import("@/lib/dashboardApi");
-        const id = await ambilIdentitas({ cache: "no-store" });
-        if (hidup && id) setIdentitasKini(id);
+        const { ambilIdentitas, ambilGuidebook } = await import("@/lib/dashboardApi");
+        /* Berbarengan — dua panggilan berurutan menambah tunggu tanpa alasan,
+           dan yang satu tidak bergantung hasil yang lain. */
+        const [id, gb] = await Promise.all([
+          ambilIdentitas({ cache: "no-store" }),
+          ambilGuidebook({ cache: "no-store" }),
+        ]);
+        if (!hidup) return;
+        if (id) setIdentitasKini(id);
+        setPanduan(gb ?? null);
       } catch {
         /* Gagal mengambil berarti tetap memakai nilai dari pembangunan
            halaman — bukan tombol yang hilang. */
@@ -156,14 +164,24 @@ const HomeOwlSlider = ({ identitas = null }) => {
                 </a>
               </Link>
 
-              <a
-                href="https://drive.google.com/file/d/15pFq6pdV92j0LhJ5_P8-qTwgJCr3_t7-/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="site-button m-r10 white button-lg"
-              >
-                Guide Book
-              </a>
+              {/* Guide Book muncul hanya kalau panitia sudah menerbitkannya
+                  dari dasbor. Tautannya dulu dipaku ke satu berkas Google
+                  Drive dan dikomentari begitu edisinya lewat — jadi ia selalu
+                  tertinggal satu edisi, dan menghidupkannya kembali menuntut
+                  programmer. Persis pola yang sudah dibereskan untuk tulisan
+                  "Coming Soon" di atas.
+
+                  Belum terbit berarti tombolnya TIDAK ADA, bukan mati. */}
+              {panduan?.url && (
+                <a
+                  href={panduan.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="site-button m-r10 white button-lg"
+                >
+                  Guide Book
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -198,14 +216,24 @@ const HomeOwlSlider = ({ identitas = null }) => {
                   {buka ? `Register Now ${tahun}` : `Coming Soon ${tahun}`}
                 </a>
               </Link>
-              <a
-                href="https://drive.google.com/file/d/15pFq6pdV92j0LhJ5_P8-qTwgJCr3_t7-/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="site-button m-r10 white button-lg"
-              >
-                Guide Book
-              </a>
+              {/* Guide Book muncul hanya kalau panitia sudah menerbitkannya
+                  dari dasbor. Tautannya dulu dipaku ke satu berkas Google
+                  Drive dan dikomentari begitu edisinya lewat — jadi ia selalu
+                  tertinggal satu edisi, dan menghidupkannya kembali menuntut
+                  programmer. Persis pola yang sudah dibereskan untuk tulisan
+                  "Coming Soon" di atas.
+
+                  Belum terbit berarti tombolnya TIDAK ADA, bukan mati. */}
+              {panduan?.url && (
+                <a
+                  href={panduan.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="site-button m-r10 white button-lg"
+                >
+                  Guide Book
+                </a>
+              )}
             </div>
           </div>
         </div>
@@ -240,14 +268,24 @@ const HomeOwlSlider = ({ identitas = null }) => {
                   {buka ? `Register Now ${tahun}` : `Coming Soon ${tahun}`}
                 </a>
               </Link>
-              <a
-                href="https://drive.google.com/file/d/15pFq6pdV92j0LhJ5_P8-qTwgJCr3_t7-/view?usp=sharing"
-                target="_blank"
-                rel="noreferrer noopener"
-                className="site-button m-r10 white button-lg"
-              >
-                Guide Book
-              </a>
+              {/* Guide Book muncul hanya kalau panitia sudah menerbitkannya
+                  dari dasbor. Tautannya dulu dipaku ke satu berkas Google
+                  Drive dan dikomentari begitu edisinya lewat — jadi ia selalu
+                  tertinggal satu edisi, dan menghidupkannya kembali menuntut
+                  programmer. Persis pola yang sudah dibereskan untuk tulisan
+                  "Coming Soon" di atas.
+
+                  Belum terbit berarti tombolnya TIDAK ADA, bukan mati. */}
+              {panduan?.url && (
+                <a
+                  href={panduan.url}
+                  target="_blank"
+                  rel="noreferrer noopener"
+                  className="site-button m-r10 white button-lg"
+                >
+                  Guide Book
+                </a>
+              )}
             </div>
           </div>
         </div>
