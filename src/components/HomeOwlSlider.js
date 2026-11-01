@@ -68,6 +68,8 @@ function SamplePrevArrow(props) {
  * bekerja, sementara guidebook edisi ini belum diterbitkan dari dasbor.
  * Menggantinya berarti menghilangkan tombol yang berfungsi.
  */
+const SERI_PANDUAN = process.env.NEXT_PUBLIC_IYSA_SERIES ?? "AISEEF";
+
 const HomeOwlSlider = ({ identitas = null, guidebook = null }) => {
   const [identitasKini, setIdentitasKini] = useState(identitas);
   const [panduan, setPanduan] = useState(guidebook);
@@ -176,6 +178,9 @@ const HomeOwlSlider = ({ identitas = null, guidebook = null }) => {
                   Belum terbit berarti tombolnya TIDAK ADA, bukan mati. */}
               {panduan?.url && (
                 <a
+                  /* Membuka modal panduan IYSA (embed/panduan.js); tanpa
+                     skripnya href tetap membuka PDF guidebook langsung. */
+                  data-iysa-panduan={SERI_PANDUAN}
                   href={panduan.url}
                   target="_blank"
                   rel="noreferrer noopener"

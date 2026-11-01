@@ -1,5 +1,7 @@
 import Link from "next/link";
 
+const SERI_PANDUAN = process.env.NEXT_PUBLIC_IYSA_SERIES ?? "AISEEF";
+
 const HeaderMenu = () => {
   return (
     <>
@@ -70,6 +72,17 @@ const HeaderMenu = () => {
             Guidebook <i className="fa fa-chevron-down"></i>{" "}
           </Link>
           <ul className="sub-menu left">
+            {/* Edisi berjalan + Syarat & Ketentuan resmi — modal panduan IYSA. */}
+            <li>
+              <a href="#guidebook" data-iysa-panduan={SERI_PANDUAN} className="dez-page">
+                Guidebook & Terms
+              </a>
+            </li>
+            <li>
+              <a href="#terms-and-conditions" data-iysa-panduan={SERI_PANDUAN} data-iysa-panduan-jenis="tnc" className="dez-page">
+                Terms &amp; Conditions
+              </a>
+            </li>
             <li>
               <a
                 href="https://drive.google.com/file/d/1JElLI07u0s1DpQW6mvtlHdNAJ8AdAevD/view?usp=sharing"
